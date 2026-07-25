@@ -1285,6 +1285,80 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Books Details Section
+--------------------------------------------------------------*/
+.books-1-details .books-1-details-slider {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.books-1-details .books-1-details-slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--surface-color), transparent 80%);
+  padding: 10px;
+  min-height: 420px;
+}
+
+.books-1-details .books-1-details-slider img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.books-1-details .books-1-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.books-1-details .books-1-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.books-1-details .books-1-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.books-1-details .books-1-info,
+.books-1-details .books-1-description {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--surface-color);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
+}
+
+.books-1-details .books-1-info h3,
+.books-1-details .books-1-description h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.books-1-details .books-1-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.books-1-details .books-1-info ul li+li {
+  margin-top: 10px;
+}
+
+.books-1-details .books-1-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
