@@ -1,0 +1,195 @@
+/*--------------------------------------------------------------
+# Responsive Gallery - Product Page
+--------------------------------------------------------------*/
+
+.product-gallery > [class*="col-"] {
+  display: flex;
+}
+
+/* Mobile: 2 kolom untuk layar kecil */
+@media (max-width: 575px) {
+  .product-gallery > .col-6 {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+}
+
+/* Tablet: 3 kolom untuk tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+  .product-gallery > .col-sm-4 {
+    flex: 0 0 33.33333333%;
+    width: 33.33333333%;
+  }
+}
+
+/* Desktop: 5 kolom untuk layar besar */
+@media (min-width: 992px) {
+  .product-gallery > .col-lg-2-4 {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+}
+
+/* Gallery Card Styling */
+.gallery-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-color);
+  cursor: zoom-in;
+  padding: 0;
+  position: relative;
+}
+
+.gallery-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #f3f4f6;
+}
+
+.gallery-card .card-body {
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gallery-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.gallery-card p {
+  font-size: 11px;
+  color: var(--default-color);
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Click-to-expand modal */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 11, 20, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.gallery-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gallery-modal-content {
+  width: min(100%, 980px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.gallery-modal-image {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1722;
+  padding: 24px;
+}
+
+.gallery-modal-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery-modal-body {
+  padding: 16px 20px 20px;
+  color: #111;
+  background: #fff;
+  overflow: auto;
+}
+
+.gallery-modal-body h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #111;
+}
+
+.gallery-modal-body p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 14px;
+  color: #334155;
+}
+
+@media (max-width: 767px) {
+  .gallery-modal-content {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .gallery-modal-image {
+    padding: 12px;
+  }
+
+  .gallery-modal-body {
+    padding: 14px 16px 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-card img {
+    height: 180px;
+  }
+}
+
