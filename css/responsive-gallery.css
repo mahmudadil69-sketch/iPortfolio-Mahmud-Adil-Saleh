@@ -52,10 +52,29 @@
 
 .gallery-card img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: auto;
   display: block;
   background: #f3f4f6;
+}
+
+/* Seluruh gambar membuka lightbox; ikon zoom tidak lagi diperlukan. */
+.gallery-card .zoom-btn {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+.gallery-card .zoom-btn i {
+  display: none;
+}
+
+.gallery-card .zoom-btn:hover,
+.gallery-card .zoom-btn:focus {
+  background: transparent;
 }
 
 .gallery-card .card-body {
@@ -187,9 +206,4 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .gallery-card img {
-    height: 180px;
-  }
-}
 
