@@ -1041,9 +1041,9 @@ section,
 @media (max-width: 575px) {
   .portfolio .portfolio-content .portfolio-info .preview-link,
   .portfolio .portfolio-content .portfolio-info .details-link {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
